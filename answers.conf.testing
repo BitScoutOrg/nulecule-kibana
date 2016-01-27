@@ -1,6 +1,6 @@
 [general]
-namespace = bitscout-kibana
+namespace = viaq-kibana
 provider = docker
-[bitscout-kibana]
+[viaq-kibana]
 elasticsearchhost = 172.17.42.1
 uid = 1000

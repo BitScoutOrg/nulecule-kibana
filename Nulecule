@@ -1,30 +1,30 @@
 ---
 specversion: 0.0.2
-id: bitscout-kibana-app
+id: viaq-nulecule-kibana
 
 metadata:
-  name: Kibana for BitScout
+  name: Kibana for ViaQ
   appversion: 0.0.1
-  description: BitScout implementation of Kibana
+  description: ViaQ implementation of Kibana
 
 graph:
-  - name: bitscout-kibana
+  - name: viaq-kibana
     params:
       - name: appname
         description: Name given to docker run --name
-        default: bitscout-kibana
+        default: viaq-kibana
       - name: image
         description: Image to run
-        default: bitscout/kibana:latest
+        default: viaq/kibana:latest
       - name: uid
         description: "User id to use to run kibana (hint: use numeric if not root)"
         default: root
       - name: elasticsearchhost
         description: host/ip addr to use to connect to elasticsearch - works with link_es below
-        default: bitscout-elasticsearch
+        default: viaq-elasticsearch
       - name: link_es
-        description: Use --link bitscout-elasticsearch
-        default: "--link bitscout-elasticsearch"
+        description: Use --link viaq-elasticsearch
+        default: "--link viaq-elasticsearch"
     artifacts:
       docker:
         - file://artifacts/docker/run
